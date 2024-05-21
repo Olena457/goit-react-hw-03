@@ -1,0 +1,21 @@
+.phoneBook {
+  border: 3px solid black;
+  padding: 20px;
+}
+.contactForm {
+  margin-bottom: 20px;
+}
+.contactFormlabel {
+  display: block;
+}
+.contactFormInput {
+  width: calc(100% - 22px);
+  padding: 10px;
+}
+.contactFormBtn {
+  color: azure;
+  background-color: blue;
+  border: 1px solid black;
+  padding: 10px;
+  cursor: pointer;
+}

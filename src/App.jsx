@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import contacts from '../src/contact.json';
+// import { useId } from "react";
+// import css from './ContactForm.module.css';
+// import { Formik, Form, Field } from "formik";
+
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      {/* <h1>Phonebook</h1>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+const initialValues = {
+  username: "",
+  number: "",
+};
+
+const ContactForm = () => {
+  const nameFieldId = useId();
+  const telFieldId = useId();
+
+  const handleSubmit = (values, actions) => {
+    console.log(values);
+    actions.resetForm();
+  };
+
+  return (
+    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+      <Form>
+        <label htmlFor={nameFieldId}>Name</label>
+        <Field type="text" name="username" id={nameFieldId} />
+
+        <label htmlFor={tellFieldId}></label>
+        <Field type="number" name="tel" id={tellFieldId} />
+
+        <button type="submit">Add contact</button>
+      </Form>
+    </Formik>
+  );
+};
+</div> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
