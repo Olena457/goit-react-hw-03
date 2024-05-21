@@ -1,6 +1,11 @@
 .label {
-  margin: 0;
+  font-size: 18px;
+  font-size: 18px;
 }
 .SearchBox {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+.input {
+  padding: 5px;
+  width: 95%;
 }

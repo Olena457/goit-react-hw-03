@@ -1,5 +1,5 @@
 .phoneBook {
-  border: 3px solid black;
+  border: 1px solid black;
   padding: 20px;
 }
 .contactForm {
@@ -7,12 +7,15 @@
 }
 .contactFormlabel {
   display: block;
+  font-size: 18px;
 }
-/* .contactFormInput {
-  width: calc(100% - 22px);
-  padding: 10px;
-} */
+.contactFormInput {
+  padding: 5px;
+  width: 95%;
+}
+
 .contactFormBtn {
+  margin-top: 20px;
   color: azure;
   background-color: blue;
   border: 1px solid black;
