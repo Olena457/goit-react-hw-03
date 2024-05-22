@@ -4,7 +4,7 @@ import { useId } from 'react';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 
-const initialValues = {
+const initialContacts = {
   name: '',
   tel: '',
   id: nanoid(),
@@ -25,25 +25,14 @@ export default function ContactForm() {
   const telFieldId = useId();
 
   const handleSubmit = (values, actions) => {
-    if (values.name && values.tel) {
-      console.log('The form is valid.The data has been sent:', values);
-    } else {
-      console.error('The form is not valid.Please check the field.');
-    }
+    console.log(values);
     actions.resetForm();
   };
 
   return (
     <Formik
-      initialValues={initialValues}
-      validate={values => {
-        try {
-          Yup.validateYupSchema(values, validationSchema, true, values);
-        } catch (err) {
-          return Yup.yupToFormErrors(err);
-        }
-        return {};
-      }}
+      initialValues={initialContacts}
+      validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
       <div className={css.phoneBook}>
@@ -59,9 +48,12 @@ export default function ContactForm() {
                 name="name"
                 id={nameFieldId}
               />
-              <ErrorMessage name="name" component="div" className={css.error} />
+              <ErrorMessage
+                className={css.error}
+                name="name"
+                component="span"
+              />
             </div>
-
             <div>
               <label className={css.contactFormlabel} htmlFor={telFieldId}>
                 Number
@@ -72,7 +64,7 @@ export default function ContactForm() {
                 name="tel"
                 id={telFieldId}
               />
-              <ErrorMessage name="tel" component="div" className={css.error} />
+              <ErrorMessage className={css.error} name="tel" component="span" />
             </div>
 
             <button className={css.contactFormBtn} type="submit">
