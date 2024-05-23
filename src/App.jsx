@@ -11,7 +11,7 @@ function App() {
     if (savedUser !== null) {
       return JSON.parse(savedUser);
     }
-    return {};
+    return [];
   });
   const [filter, setFilter] = useState('');
 
