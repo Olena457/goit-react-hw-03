@@ -1,9 +1,10 @@
+.SearchBox {
+  margin-bottom: 25px;
+  max-width: 250px;
+}
 .label {
   font-size: 18px;
   font-size: 18px;
-}
-.SearchBox {
-  margin-bottom: 25px;
 }
 .input {
   padding: 5px;

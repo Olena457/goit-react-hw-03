@@ -35,6 +35,7 @@ export default function ContactForm({ onAdd }) {
       onSubmit={handleSubmit}
     >
       <div className={css.phoneBook}>
+        <div className={css.title}>Phonebook</div>
         <div className={css.contactForm}>
           <Form>
             <div>

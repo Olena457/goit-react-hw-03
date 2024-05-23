@@ -1,17 +1,30 @@
 .phoneBook {
-  border: 1px solid black;
-  padding: 20px;
+  border: transparent;
+}
+.title {
+  color: black;
+  font-size: -webkit-xxx-large;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: left;
 }
 .contactForm {
+  display: flex;
+  max-width: 250px;
+  padding: 25px 0px;
+  border: 1px solid black;
   margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-around;
 }
+
 .contactFormlabel {
   display: block;
   font-size: 18px;
 }
 .contactFormInput {
   padding: 5px;
-  width: 95%;
+  width: 100%;
 }
 
 .contactFormBtn {
@@ -21,14 +34,11 @@
   border: 1px solid black;
   padding: 10px;
   cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .error {
   color: red;
   font-size: 14px;
 }
-
-/* .messageBlock {
-  margin-top: 10px;
-  font-size: 14px;
-  color: red;
-} */
