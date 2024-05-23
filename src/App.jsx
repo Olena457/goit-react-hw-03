@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
 import contacts from './contact.json';
 import ContactList from './components/ContactList/ContactList';
 import SearchBox from './components/SearchBox/SearchBox';
 import ContactForm from './components/ContactForm/ContactForm';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -29,8 +29,8 @@ function App() {
       return prevContacts.filter(contact => contact.id !== contactId);
     });
   };
-  const visibleContacts = contacts.filter(contact =>
-    contact.text.toLowerCase().includes(filter.toLowerCase())
+  const visibleContacts = userContacts.filter(contact =>
+    contact.name.toLowerCase().includes(filter.toLowerCase())
   );
 
   return (

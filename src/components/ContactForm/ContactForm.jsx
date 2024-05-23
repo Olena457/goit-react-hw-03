@@ -6,26 +6,25 @@ import { nanoid } from 'nanoid';
 
 const initialContacts = {
   name: '',
-  tel: '',
-  id: nanoid(),
+  number: '',
 };
 const validationSchema = Yup.object().shape({
   name: Yup.string()
     .required('Required')
     .min(3, 'Too Short!')
     .max(50, 'Too Long!'),
-  tel: Yup.string()
+  number: Yup.string()
     .required('Required')
     .min(3, 'Too Short!')
     .max(50, 'Too Long!'),
 });
 
-export default function ContactForm() {
-  const nameFieldId = useId('name');
-  const telFieldId = useId('tel');
+export default function ContactForm({ onAdd }) {
+  const nameFieldId = useId();
+  const telFieldId = useId();
 
   const handleSubmit = (values, actions) => {
-    console.log(values);
+    onAdd({ ...values, id: nanoid() });
     actions.resetForm();
   };
 
@@ -61,10 +60,14 @@ export default function ContactForm() {
               <Field
                 className={css.contactFormInput}
                 type="text"
-                name="tel"
+                name="number"
                 id={telFieldId}
               />
-              <ErrorMessage className={css.error} name="tel" component="span" />
+              <ErrorMessage
+                className={css.error}
+                name="number"
+                component="span"
+              />
             </div>
 
             <button className={css.contactFormBtn} type="submit">
