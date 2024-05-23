@@ -21,8 +21,8 @@ const validationSchema = Yup.object().shape({
 });
 
 export default function ContactForm() {
-  const nameFieldId = useId();
-  const telFieldId = useId();
+  const nameFieldId = useId('name');
+  const telFieldId = useId('tel');
 
   const handleSubmit = (values, actions) => {
     console.log(values);
