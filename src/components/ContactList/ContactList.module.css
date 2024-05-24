@@ -3,12 +3,13 @@
   padding: 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 16px;
 }
 
 .item {
   max-width: calc(50% - 8px);
-  /* max-width: 600px; */
+
   list-style: none;
 }
